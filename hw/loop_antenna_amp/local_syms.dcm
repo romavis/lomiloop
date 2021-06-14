@@ -1,0 +1,21 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Transformer_1PS_2S_ferrite
+D Transformer, split primary, two secondaries
+K transformer coil magnet
+F ~
+$ENDCMP
+#
+$CMP Transformer_1P_1S_ferrite
+D Transformer, single primary, split secondary
+K transformer coil magnet
+F ~
+$ENDCMP
+#
+$CMP Transformer_TL_Basic
+D Transformer, transmission line, basic building block
+K transformer coil balun
+F ~
+$ENDCMP
+#
+#End Doc Library
