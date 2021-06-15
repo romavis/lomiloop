@@ -1662,4 +1662,14 @@ F 3 "" H 6500 7150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6500 7050 6500 7150
+Text Notes 1000 5400 0    50   ~ 0
+Transformer T1:\n  Fair-Rite 5943004901 toroid\n  5 turns of RG174\n\nTransformer T2:\n  Fair-Rite 2843000202 core (BN-43-202)\n  0.3mm magnetic copper wire\n  1-2: 1 turn\n  2-3: 1 turn\n  4-5: 8 turns\n  6-7: 8 turns\n\nTransformer T3:\n  Fair-Rite 2843000202 core (BN-43-202)\n  10 turns of twisted pair made from\n  0.3mm magnetic copper wire\n
+Text Notes 5000 1000 0    50   ~ 0
+Adjust C11 to achieve frequency response drop\nof -3dB @ 35-40 MHz without excessive peaking.\nReplace C8, C9 if needed.
+Text Notes 6500 3900 0    50   ~ 0
+DC bias regulator
+Text Notes 8500 5500 0    50   ~ 0
+Unused opamp
+Text Notes 1000 6300 0    50   ~ 0
+DC-biased antenna feed\npower supply
 $EndSCHEMATC
