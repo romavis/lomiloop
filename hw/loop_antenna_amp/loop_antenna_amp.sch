@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "Lomiloop antenna amplifier"
 Date "2021-06-14"
-Rev ""
+Rev "1"
 Comp "Roman Dobrodii"
 Comment1 "Licensed under Solderpad Hardware License v2.1"
 Comment2 ""
@@ -1053,8 +1053,6 @@ F 3 "" H 6500 7150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6500 7050 6500 7150
-Text Notes 1000 5400 0    50   ~ 0
-Transformer T1:\n  Fair-Rite 5943004901 toroid\n  5 turns of RG174\n\nTransformer T2:\n  Fair-Rite 2843000202 core (BN-43-202)\n  0.3mm magnetic copper wire\n  1-2: 1 turn\n  2-3: 1 turn\n  4-5: 8 turns\n  6-7: 8 turns\n\nTransformer T3:\n  Fair-Rite 2843000202 core (BN-43-202)\n  10 turns of twisted pair made from\n  0.3mm magnetic copper wire\n
 Text Notes 4800 900  0    50   ~ 0
 Adjust response @ 20-30 MHz with C13.\nChange C10, C11 to 2.2 or 4.7pF if needed.
 Text Notes 1000 6300 0    50   ~ 0
@@ -1938,4 +1936,6 @@ Wire Wire Line
 	3400 3000 4150 3000
 Wire Wire Line
 	3100 2350 3100 3000
+Text Notes 1600 900  0    50   ~ 0
+Transformers T1, T2, T3:\nsee TRANSFORMERS.md file for instructions
 $EndSCHEMATC
