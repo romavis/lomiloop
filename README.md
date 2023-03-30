@@ -2,19 +2,52 @@
 
 **Lomiloop** is a wideband directional receiving loop antenna amplifier.
 
-Amplifier circuitry itself is suitable for the frequency band from 50 kHz to
-about 30 MHz, but actual lower and upper operating frequencies, as well as
-sensitivity and noise floor are strongly affected by the construction of the
-loop itself.
+With it, you can build antennas that look like [this](docs/ant1.jpg).
 
 It was designed for thick single-turn coreless loops with high area and low
-inductance, that are electrically small compared to the wavelength. With a loop
-having ~1.0m diameter, this allows to build an antenna that is moderately
-portable, wideband, displaying almost flat antenna factor throughout band of
-interest (50 kHz to a bit higher than 10 MHz), and having high enough
-sensitivity to be used on LW and MW. It can also be used on HF, however, the
-noise floor of loop+amplifier system there is noticeably higher than atmospheric
-noise, limiting the usability.
+inductance, that are electrically small compared to the wavelength of received
+signal. With ~1.0m dia. loop, this allows to build an antenna that is
+moderately portable, wideband, displaying almost flat antenna factor throughout
+band of interest (approx. 50 kHz to 10 MHz), and has high enough sensitivity and
+discrimination of near-field E-field noise sources that it can be used for
+receiving LF and MF bands in urban areas. Usage of HF is possible, although not
+recommended due to:
+- Antenna noise which is noticeably higher than the atmospheric noise in HF band
+- Wave effects in the loop on frequencies above ~15 MHz.
+
+# Schematic and PCB
+
+All the files here were designed in KiCad 5.1.10.
+
+Schematic is also available in [PDF format](docs/schematic.pdf).
+
+The PCB that is presented in this repository was specifically designed for
+*Gainta G113* aluminium housing (also sold under Velleman brand in EU). For coax
+connection, it uses female SMA connector to which BNC-SMA pigtail is then
+connected, and Keystone 7771 screw terminals for loop connection. Actual loop is
+wired to the binding posts which are mounted on the housing and then wired to
+the Keystone terminals on the PCB.
+
+Photos of assembled PCB:
+
+<table>
+  <tr>
+    <td><a href="docs/ant3.jpg"><img src="docs/ant3.jpg" alt="photo of the PCB" height=300px></a></td>
+    <td><a href="docs/ant2.jpg"><img src="docs/ant2.jpg" alt="photo of the PCB mounted in an enclosure" height=300px></a></td>
+   </tr> 
+</table>
+
+# Loop selection
+
+Author uses D=90cm circular loop made from aluminium pipe d=15mm with wall
+thickness s=1mm. This loop has a measured inductance of 2.46 uH at 1 MHz.
+
+Originally it was an anodized aluminium hulahoop from NiroSport brand, ends of
+which have been spread, a middle d=16mm aluminium pipe have been added and fixed
+in place using T-pieces and epoxy. The end result is visible on the 
+photo:
+
+<a href="docs/ant1.jpg"><img src="docs/ant1.jpg"  alt="photo of Lomiloop antenna" height=300px></a>
 
 # Background
 
@@ -50,28 +83,6 @@ man-made noise that comes from unefficient near-field radiators that produce EM
 field wherein [wave impedance](https://en.wikipedia.org/wiki/Wave_impedance) is
 significantly higher than the
 [impedance of free space](https://en.wikipedia.org/wiki/Impedance_of_free_space).
-
-# Schematic and PCB
-
-All the files here were designed in KiCad 5.1.10.
-
-Schematic is also available in [PDF format](docs/schematic.pdf).
-
-The PCB that is presented in this repository was specifically designed for
-*Gainta G113* aluminium housing (also sold under Velleman brand in EU). For coax
-connection, it uses female SMA connector to which BNC-SMA pigtail is then
-connected, and Keystone 7771 screw terminals for loop connection. Actual loop is
-wired to the binding posts which are mounted on the housing and then wired to
-the Keystone terminals on the PCB.
-
-Photos - TBD.
-
-# Loop selection
-
-TBD
-
-Author uses D=90cm aluminium hulahoop made from pipe d=15mm with wall thickness
-s=1mm. This loop has a measured inductance of 2.46 uH at 1 MHz.
 
 # Circuit description
 
@@ -142,10 +153,6 @@ transistors.
 MKT/MKP film capacitors are used for C14 and C15 - due to their rather high
 capacity of 1uF and the fact that their low leakage is crucial to correct
 integrator operation.
-
-# Measurements and adjustments
-
-TBD
 
 # License
 
